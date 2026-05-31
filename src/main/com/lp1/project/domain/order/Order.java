@@ -32,7 +32,7 @@ public class Order {
         this.address = address;
         this.items = items;
         this.situation = situation;
-        this.totalValue = totalValue.add(shipping.getShippingValue());
+        this.totalValue = totalValue;
         this.transporter = shipping.getTransporter();
 
         this.dateTimePurchase = LocalDateTime.now();

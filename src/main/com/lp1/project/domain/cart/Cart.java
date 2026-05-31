@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Cart {
     private List<CartItem> items;
-    private BigDecimal totalValue;
+    private BigDecimal cartSubtotal;
 
     public void addItem(Product product, int quantity){
 
@@ -24,7 +24,7 @@ public class Cart {
     }
 
     private void updateTotalPriceTotal(){
-        totalValue = items.stream()
+        cartSubtotal = items.stream()
                 .map(CartItem::getSubtotal)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
 
@@ -34,7 +34,7 @@ public class Cart {
         return items;
     }
 
-    public BigDecimal getTotalValue() {
-        return totalValue;
+    public BigDecimal getCartSubtotal() {
+        return cartSubtotal;
     }
 }
