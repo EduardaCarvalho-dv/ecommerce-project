@@ -2,6 +2,7 @@ package com.lp1.project.domain.order;
 
 public enum OrderSituation {
     ORDER_RECEIVED("OrderReceived"),
+    PAID("Paid"),
     SENT("Sent"),
     RECEIVED_BY_TRANSPORTER("ReceivedByTransporter"),
     IN_TRANSIT("InTransit"),

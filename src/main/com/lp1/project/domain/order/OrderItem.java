@@ -9,7 +9,7 @@ public class OrderItem {
     private Integer quantity;
     private BigDecimal subtotal;
 
-    OrderItem(Product product, int quantity){
+    public OrderItem(Product product, int quantity){
         this.product = product;
         this.quantity = quantity;
 

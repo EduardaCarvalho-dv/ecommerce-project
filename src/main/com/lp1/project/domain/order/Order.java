@@ -25,7 +25,7 @@ public class Order {
 
     private static long idCount = 0;
 
-    Order(Customer customer, PaymentMethod paymentMethod, Address address, List<OrderItem> items,
+    public Order(Customer customer, PaymentMethod paymentMethod, Address address, List<OrderItem> items,
           BigDecimal totalValue, OrderSituation situation, Shipping shipping){
         this.customer = customer;
         this.paymentMethod = paymentMethod;
@@ -42,6 +42,10 @@ public class Order {
 
         System.out.println("Pedido nº" + this.id + " criado em " +
                 dateTimePurchase.format(DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy")));
+    }
+
+    public void setSituation(OrderSituation situation) {
+        this.situation = situation;
     }
 
     public long getId() {

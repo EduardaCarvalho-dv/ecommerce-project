@@ -1,10 +1,7 @@
 package com.lp1.project.domain.payment;
 
-public class PaymentMethod {
-    private String name;
+import java.math.BigDecimal;
 
-    public boolean processPayment() {
-        return false;
-    }
-
+public abstract class PaymentMethod {
+    public abstract boolean processPayment(BigDecimal value);
 }
