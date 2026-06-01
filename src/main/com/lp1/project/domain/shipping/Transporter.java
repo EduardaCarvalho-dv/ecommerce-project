@@ -11,7 +11,7 @@ public class Transporter {
     private String contact;
     private URI website;
 
-    private static long idCount = 0;
+    private static long idCount = 1;
 
     public Transporter(String name, BigDecimal shippingFactor, Integer deliveryDaysAdjustment, String contact, URI website) {
         this.name = name;

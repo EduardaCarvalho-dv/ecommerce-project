@@ -20,7 +20,7 @@ public class Product {
     private Float totalRating;
     private List<Review> reviews;
 
-    private static long idCount = 0;
+    private static long idCount = 1;
 
     public Product(String name, String description, BigDecimal price,
                    Category category, Float weight, String technicalSpecs,

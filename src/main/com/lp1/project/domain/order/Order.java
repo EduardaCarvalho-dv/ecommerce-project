@@ -23,7 +23,7 @@ public class Order {
 
     private LocalDateTime dateTimePurchase;
 
-    private static long idCount = 0;
+    private static long idCount = 1;
 
     public Order(Customer customer, PaymentMethod paymentMethod, Address address, List<OrderItem> items,
           BigDecimal totalValue, OrderSituation situation, Shipping shipping){
