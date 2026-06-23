@@ -1,6 +1,7 @@
 package com.lp1.project.app.screens;
 
 import com.lp1.project.app.App;
+import com.lp1.project.domain.user.UserRole;
 
 public class MainMenuScreen {
     public static void show() {
@@ -30,6 +31,16 @@ public class MainMenuScreen {
             }
         }
 
+        exit = false;
+        while(!exit) {
+
+            boolean isAdmin = App.getSession().getCurrentUser().getRole().equals(UserRole.ADMIN);
+            if (isAdmin) {
+                AdminMainScreen.show();
+            } else {
+                CustomerMainScreen.show();
+            }
+        }
 
     }
 }

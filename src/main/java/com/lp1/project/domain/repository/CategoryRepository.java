@@ -2,6 +2,7 @@ package com.lp1.project.domain.repository;
 
 import com.google.gson.reflect.TypeToken;
 import com.lp1.project.domain.category.Category;
+import com.lp1.project.domain.product.Product;
 
 import java.util.List;
 
@@ -27,4 +28,10 @@ public class CategoryRepository extends JsonRepository<Category> {
                 .toList();
     }
 
+    public Category findByName(String name) {
+        return items.stream()
+                .filter(p -> p.getName().equalsIgnoreCase(name))
+                .findAny()
+                .orElse(null);
+    }
 }

@@ -14,6 +14,7 @@ public class Product {
     private BigDecimal price;
     private Category category;
     private Float weight;
+    private String technicalSpecs;
     private Integer warrantyMonths;
 
     private Float totalRating;
@@ -30,6 +31,7 @@ public class Product {
         this.price = price;
         this.category = category;
         this.weight = weight;
+        this.technicalSpecs = technicalSpecs;
         this.warrantyMonths = warrantyMonths;
         this.stockQuantity = stockQuantity;
 
@@ -45,6 +47,7 @@ public class Product {
                 "\nNome: " + name + " - R$" + price +
                 "\nEstoque: " + stockQuantity + "Peso: " + weight + "kg" +
                 "\nDescrição:\n" + description +
+                "\nEspecificações técnicas:\n" + technicalSpecs +
                 "\nCategoria: " + category.getName() +
                 "\nMeses de Garantia: " + warrantyMonths +
                 "\nAvaliação dos usuários: " + totalRating;

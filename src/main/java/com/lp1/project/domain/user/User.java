@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
-
 public class User {
+    private UserRole role;
     private long id;
     private String name;
     private LocalDate birth;
@@ -31,6 +31,9 @@ public class User {
 
     }
 
+    public void setRole(UserRole role) {
+        this.role = role;
+    }
 
     public static void synchronizeIdCounter(List<User> users) {
         long maxId = users.stream()
@@ -67,6 +70,10 @@ public class User {
 
     public String getNumberPhone() {
         return numberPhone;
+    }
+
+    public UserRole getRole() {
+        return role;
     }
 
     @Override

@@ -42,7 +42,7 @@ public class UserService {
         if (repository.findByCPF(cpf) != null)
             throw new IllegalArgumentException("Este CPF já está cadastrado.");
 
-        User user = new User(
+        User user = new Customer(
                 name,
                 birth,
                 cpf,

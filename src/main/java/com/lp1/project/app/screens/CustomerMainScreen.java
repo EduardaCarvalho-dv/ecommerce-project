@@ -1,0 +1,29 @@
+package com.lp1.project.app.screens;
+
+import com.lp1.project.app.App;
+
+public class CustomerMainScreen {
+    public static void show() {
+        try {
+            System.out.println("1. Fazer pedido\n2. Ver pedidos\n3. Fazer review\n4. Ver reviews\n5. Configurações\n6. Sair");
+
+            int op = App.SCANNER.nextInt();
+            App.SCANNER.nextLine();
+
+            switch (op) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

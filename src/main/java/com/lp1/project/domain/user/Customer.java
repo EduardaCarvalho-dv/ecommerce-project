@@ -18,6 +18,7 @@ public class Customer extends User {
 
     public Customer(String name, LocalDate birth, String cpf, String email, String password, String numberPhone) {
         super(name, birth, cpf, email, password, numberPhone);
+        setRole(UserRole.CUSTOMER);
     }
 
     public Address getPrincipalAddress() {
