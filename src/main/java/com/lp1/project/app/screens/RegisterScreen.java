@@ -24,7 +24,7 @@ public class RegisterScreen {
 
                 Customer user = (Customer) service.register(name, birth, cpf, email, password, phone);
 
-                System.out.println("Usuário criado: " + user.getName());
+                System.out.println("\nUsuário criado: " + user.getName());
 
                 session.login(user);
 

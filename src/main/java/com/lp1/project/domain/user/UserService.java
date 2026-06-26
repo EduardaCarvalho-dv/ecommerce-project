@@ -19,10 +19,10 @@ public class UserService {
             user = repository.findByEmail(login);
 
         if (user == null)
-            throw new RuntimeException("Login não cadastrado");
+            throw new RuntimeException("\nLogin não cadastrado");
 
         if (!user.getPassword().equals(password))
-            throw new RuntimeException("Senha incorreta");
+            throw new RuntimeException("\nSenha incorreta");
 
         return user;
     }
@@ -38,9 +38,9 @@ public class UserService {
         validNumberPhone(numberPhone);
 
         if (repository.findByEmail(email) != null)
-            throw new IllegalArgumentException("Este e-mail já está sendo utilizado");
+            throw new IllegalArgumentException("\nEste e-mail já está sendo utilizado");
         if (repository.findByCPF(cpf) != null)
-            throw new IllegalArgumentException("Este CPF já está cadastrado.");
+            throw new IllegalArgumentException("\nEste CPF já está cadastrado.");
 
         User user = new Customer(
                 name,
@@ -52,7 +52,6 @@ public class UserService {
         );
 
         repository.save(user);
-        System.out.println("Usuário nº" + user.getId() + " cadastrado com sucesso");
 
         return user;
     }
@@ -66,7 +65,7 @@ public class UserService {
                 + "\\d{8}"
                 + "$"
         )){
-            throw new IllegalArgumentException("Número de telefone inválido");
+            throw new IllegalArgumentException("\nNúmero de telefone inválido");
         }
     }
 
@@ -79,7 +78,7 @@ public class UserService {
                 + ".{8,}" // tem 8 ou mais caracteres
                 + "$"
         )) {
-            throw new IllegalArgumentException("A senha deve ter ao menos um caractere especial, "
+            throw new IllegalArgumentException("\nA senha deve ter ao menos um caractere especial, "
             + "uma letra maiúscula e pelo menos 8 caracteres");
         }
     }
@@ -91,7 +90,7 @@ public class UserService {
                 + "+\\.[A-Za-z]{2,}"
                 + "$"
         )) {
-            throw new IllegalArgumentException("E-mail inválido");
+            throw new IllegalArgumentException("\nE-mail inválido");
         }
     }
 
@@ -101,14 +100,14 @@ public class UserService {
         // sempre teria que botar um cpf valido para testes
 
         if (cpf.length() != 11 || cpf.matches("(\\d)\\1{10}")) {
-            throw new IllegalArgumentException("CPF inválido");
+            throw new IllegalArgumentException("\nCPF inválido");
         }
     }
 
 
     public void validBirth(LocalDate birth) {
         if (birth.isAfter(LocalDate.now().minusYears(18))){
-            throw new IllegalArgumentException("Deve ser maior de idade para criar uma conta no site");
+            throw new IllegalArgumentException("\nDeve ser maior de idade para criar uma conta no site");
         }
     }
 
