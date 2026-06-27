@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Eletrônicos",
+    "description": "Produtos eletrônicos em geral",
+    "parentCategory": null
+  },
+  {
+    "id": 2,
+    "name": "Computadores",
+    "description": "Desktops e notebooks",
+    "parentCategory": {
+      "id": 1,
+      "name": "Eletrônicos",
+      "description": "Produtos eletrônicos em geral",
+      "parentCategory": null
+    }
+  },
+  {
+    "id": 3,
+    "name": "Periféricos",
+    "description": "Mouse, teclado e acessórios",
+    "parentCategory": {
+      "id": 1,
+      "name": "Eletrônicos",
+      "description": "Produtos eletrônicos em geral",
+      "parentCategory": null
+    }
+  }
+]
