@@ -20,7 +20,6 @@ public class Customer extends User {
 
     public Customer(String name, LocalDate birth, String cpf, String email, String password, String numberPhone) {
         super(name, birth, cpf, email, password, numberPhone);
-        setRole(UserRole.CUSTOMER);
 
         addresses = new ArrayList<>();
         favorites = new HashSet<>();
@@ -35,6 +34,7 @@ public class Customer extends User {
     public Address getPrincipalAddress() {
         return principalAddress;
     }
+
 
     public void setPrincipalAddress(Address principalAddress) {
         this.principalAddress = principalAddress;

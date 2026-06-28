@@ -1,8 +1,8 @@
 package com.lp1.project.app.screens;
 
 import com.lp1.project.app.App;
+import com.lp1.project.domain.user.Admin;
 import com.lp1.project.domain.user.User;
-import com.lp1.project.domain.user.UserRole;
 
 import java.util.InputMismatchException;
 
@@ -37,7 +37,7 @@ public class MainMenuScreen {
             while(App.getSession().isLoggedIn()){
                 User user = App.getSession().getCurrentUser();
 
-                if (user.getRole().equals(UserRole.ADMIN)){
+                if (user instanceof Admin){
                     AdminMainScreen.show();
                 } else {
                     CustomerMainScreen.show();

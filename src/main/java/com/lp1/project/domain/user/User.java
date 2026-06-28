@@ -4,8 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
-public class User {
-    private UserRole role;
+public abstract class User {
     private long id;
     private String name;
     private LocalDate birth;
@@ -29,10 +28,6 @@ public class User {
         this.id = idCount;
         idCount++;
 
-    }
-
-    public void setRole(UserRole role) {
-        this.role = role;
     }
 
     public static void synchronizeIdCounter(List<User> users) {
@@ -70,10 +65,6 @@ public class User {
 
     public String getNumberPhone() {
         return numberPhone;
-    }
-
-    public UserRole getRole() {
-        return role;
     }
 
     @Override

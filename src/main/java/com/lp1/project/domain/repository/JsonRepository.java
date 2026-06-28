@@ -3,8 +3,11 @@ package com.lp1.project.domain.repository;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.lp1.project.config.GsonConfig;
 import com.lp1.project.config.LocalDateAdapter;
 import com.lp1.project.config.LocalDateTimeAdapter;
+import com.lp1.project.domain.user.Admin;
+import com.lp1.project.domain.user.Customer;
 import com.lp1.project.domain.user.User;
 
 import java.io.*;
@@ -25,17 +28,7 @@ public abstract class JsonRepository<T> {
         this.FILE_PATH = filePath;
         this.type = type;
 
-        gson = new GsonBuilder()
-                .registerTypeAdapter(
-                        LocalDate.class,
-                        new LocalDateAdapter()
-                )
-                .registerTypeAdapter(
-                    LocalDateTime.class,
-                    new LocalDateTimeAdapter()
-                )
-                .setPrettyPrinting()
-                .create();
+        gson = GsonConfig.createGson();
 
         this.items = load();
     }
@@ -55,7 +48,7 @@ public abstract class JsonRepository<T> {
             file.getParentFile().mkdirs();
 
             try (Writer writer = new FileWriter(file)) {
-                gson.toJson(items, writer);
+                gson.toJson(items, type, writer);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

@@ -6,6 +6,7 @@ import com.lp1.project.domain.payment.*;
 import com.lp1.project.domain.repository.OrderRepository;
 import com.lp1.project.domain.shipping.Shipping;
 import com.lp1.project.domain.user.Customer;
+import com.lp1.project.domain.user.User;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

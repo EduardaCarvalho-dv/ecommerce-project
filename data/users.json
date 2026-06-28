@@ -1,6 +1,6 @@
 [
   {
-    "role": "ADMIN",
+    "_type": "ADMIN",
     "id": 1,
     "name": "Administrador",
     "birth": "1990-01-01",
@@ -10,30 +10,11 @@
     "numberPhone": "84999999999"
   },
   {
-    "principalAddress": {
-      "cep": "59063-150",
-      "state": "RN",
-      "city": "Natal",
-      "neighbor": "Lagoa Nova",
-      "street": "São José",
-      "number": "1028",
-      "complement": ""
-    },
-    "addresses": [
-      {
-        "cep": "59063-150",
-        "state": "RN",
-        "city": "Natal",
-        "neighbor": "Lagoa Nova",
-        "street": "São José",
-        "number": "1028",
-        "complement": ""
-      }
-    ],
+    "_type": "CUSTOMER",
+    "addresses": [],
     "favorites": [],
     "orders": [],
     "reviews": [],
-    "role": "CUSTOMER",
     "id": 2,
     "name": "Maria Eduarda",
     "birth": "2005-08-17",

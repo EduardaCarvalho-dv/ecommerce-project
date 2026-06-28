@@ -1,8 +1,8 @@
 package com.lp1.project.domain.shipping;
 
 import com.lp1.project.domain.repository.TransporterRepository;
+import com.lp1.project.domain.user.Admin;
 import com.lp1.project.domain.user.User;
-import com.lp1.project.domain.user.UserRole;
 
 public class TransporterService {
     private final TransporterRepository repository;
@@ -12,7 +12,7 @@ public class TransporterService {
     }
 
     public void createTransporter(User user, Transporter transporter){
-        if (!(user.getRole().equals(UserRole.ADMIN))) {
+        if (!(user instanceof Admin)) {
             throw new RuntimeException("\nApenas administradores podem cadastrar produtos.");
         }
 
