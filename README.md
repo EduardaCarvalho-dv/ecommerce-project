@@ -64,7 +64,7 @@ git clone [<url-do-repositorio>](https://github.com/gusless/ecommerce-project)
 2. Entre na pasta do projeto:
 
 ```bash
-cd ecommerce-project
+cd caminho/do/projeto/ecommerce-project
 ```
 
 3. Compile o projeto:
@@ -76,7 +76,7 @@ mvn clean compile
 4. Execute a aplicação:
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.lp1.project.Main"
+mvn exec:Java
 ```
 
 Caso sua IDE esteja configurada com o Maven (IntelliJ IDEA, Eclipse ou VS Code), basta abrir o projeto e executar a classe:
