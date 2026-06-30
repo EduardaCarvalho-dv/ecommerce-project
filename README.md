@@ -58,7 +58,7 @@ O projeto simula o funcionamento básico de um sistema de e-commerce, permitindo
 1. Clone este repositório:
 
 ```bash
-git clone [<url-do-repositorio>](https://github.com/gusless/ecommerce-project)
+git clone https://github.com/gusless/ecommerce-project
 ```
 
 2. Entre na pasta do projeto:
