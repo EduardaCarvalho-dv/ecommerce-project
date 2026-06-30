@@ -46,6 +46,32 @@ src/
 
 O projeto simula o funcionamento básico de um sistema de e-commerce, permitindo que usuários realizem compras, gerenciem seus endereços, adicionem produtos ao carrinho e finalizem pedidos.
 
+## Diagramas do Sistema
+
+O projeto conta com diagramas UML que representam sua estrutura e comportamento, auxiliando na compreensão da arquitetura do sistema.
+
+### Diagrama de Classes
+
+Representa as classes principais do sistema, incluindo atributos, métodos e relacionamentos entre os módulos do e-commerce.
+
+![Diagrama de Classes Completo](./diagrams/diagram-class.png)
+
+---
+
+### Diagrama de Pacotes
+
+Mostra a organização do sistema em pacotes.
+
+![Diagrama de Pacotes](./diagrams/diagram-packages.png)
+
+---
+
+### Diagrama de Casos de Uso
+
+Representa as interações entre usuários e sistema.
+
+![Diagrama de Casos de Uso](./diagrams/case-of-use.png)
+
 ## Como Executar
 
 ### Pré-requisitos
